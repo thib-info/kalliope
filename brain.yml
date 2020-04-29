@@ -1,0 +1,37 @@
+---
+
+  - includes:
+        - brains/say.yml
+        - brains/systemdate.yml
+        - brains/neurotransmitter.yml
+
+  - name: "order-not-found-synapse"
+    signals: []
+    neurons:
+      - say:
+          message:
+            - "Je n'ai pas compris vôtre ordre"
+            - "Je ne connais pas cet ordre"
+            - "Veuillez renouveller votre ordre"
+            - "Veuillez reformuller s'il vous plait"
+            - "Je n'ai pas saisi cet ordre"
+
+  - name: "on-triggered-synapse"
+    signals: []
+    neurons:
+      - say:
+          message:
+            - "Oui monsieur?"
+            - "Je vous écoute"
+            - "Monsieur?"
+            - "Que puis-je faire pour vous?"
+            - "J'écoute"
+            - "Oui?"
+
+  - name: "on-start-synapse"
+    signals: []
+    neurons:
+      - say:
+          message: "je suis prête"
+
+

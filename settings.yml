@@ -1,0 +1,165 @@
+---
+# ---------------------------
+# Kalliope default settings
+# Use YAML syntax
+# ---------------------------
+
+# ---------------------------
+# Trigger
+# ---------------------------
+# This is the trigger that will catch your magic work to wake up Kalliope
+default_trigger: "snowboy"
+
+# Trigger engine configuration
+# Available engine are:
+# - snowboy
+triggers:
+  - snowboy:
+      pmdl_file: "trigger/kalliope-FR-90samples.pmdl"
+
+
+# ---------------------------
+# Speech to text
+# ---------------------------
+
+# This is the STT that will be used by default
+default_speech_to_text: "google"
+
+# Speech to Text engines configuration
+# Available engine are:
+# - google (via SpeechRecognition)
+# - wit
+# - bing
+# - apiai
+# - houndify
+# - cmusphinx (must be installed first)
+speech_to_text:
+  - google:
+      language: "fr-FR"
+  - wit:
+      key: "fakekey" # example : "B5JI3YUSLYOYWNIDBINBVM34XUODME2K"
+  - bing: # API not working : credential fails ..
+      key: "fakekey" # example : "9e48ddaf75904838bedc11aea6b36fb0"
+  - apiai:
+      key: "fakekey" # example : "e0cbff154af44944a6b9f82c0668b527"
+      language: "fr"
+  - houndify:
+      key: "fakekey" # example : "7zj90T7qAV74OYXk4X4vI2Xhk7wPsJu4aEZ0G5Ll-BMmV1JGtFpCxtSH9SmTY4G3bpEJ7a5y_GTQid-CAKI6vw=="
+      client_id: "fakeclientid" # example : "lN4JXeaSticbSo9-llczbA=="
+  #- cmusphinx
+
+# ---------------------------
+# Text to speech
+# ---------------------------
+# This is the default TTS that will be used by Kalliope to talk.
+default_text_to_speech: "pico2wave"
+# where we store generated audio files from TTS engine to reuse them
+cache_path: "/tmp/kalliope_tts_cache"
+
+# Text to Spreech engines configuration
+# Available engine are:
+# - pico2wave
+# - watson
+# - pico2wave
+# - googletts
+# - voicerss
+text_to_speech:
+  - pico2wave:
+      language: "fr-FR"
+      cache: True
+  - googletts:
+      language: "fr"
+      cache: True
+  - voicerss:
+      language: "fr-fr"
+      cache: True
+
+# ---------------------------
+# players
+# ---------------------------
+# This is the sound player that will be used by default
+default_player: "mplayer"
+
+# players configuration
+# Available engine are:
+# - mplayer
+# - pyalsaaudio       # no mp3
+# - pyaudioplayer     # no mp3
+# - sounddeviceplayer # no mp3
+players:
+  - mplayer: {}
+  - pyalsaaudio:
+     device: "default"
+     convert_to_wav: True
+  - pyaudioplayer:
+     convert_to_wav: True
+  - sounddeviceplayer:
+     convert_to_wav: True
+
+# ---------------------------
+# Hooks
+# ---------------------------
+hooks:
+  on_start: "on-start-synapse"
+  on_waiting_for_trigger:
+  on_triggered: "on-triggered-synapse"
+  on_start_listening:
+  on_stop_listening:
+  on_order_found:
+  on_order_not_found: "order-not-found-synapse"
+  on_processed_synapses:
+  on_deaf:
+  on_undeaf:
+  on_start_speaking:
+  on_stop_speaking:
+  on_stt_error:
+
+# ---------------------------
+# Rest API
+# ---------------------------
+rest_api:
+  active: True
+  port: 5000
+  password_protected: True
+  login: admin
+  password: secret
+  allowed_cors_origin: "*"
+
+# ---------------------------
+# resource directory path
+#
+# Accepted types :
+#   - neuron
+#   - stt
+#   - tts
+#   - trigger  /!\ we do not manage trigger properly yet...
+#   - signal
+# ---------------------------
+resource_directory:
+  neuron: "resources/neurons"
+  stt: "resources/stt"
+  tts: "resources/tts"
+  signal: "resources/signal"
+#  trigger: "resources/trigger"
+#
+
+# ---------------------------
+# Global files variables
+# /!\ If a variable is defined in different files, the last file defines the value.
+# ---------------------------
+var_files:
+  - global_variables/variables.yml
+#  - variables2.yml
+
+# -------------
+# Options
+# -------------
+options:
+#  energy_threshold: 4000                 # Speech to text option
+#  adjust_for_ambient_noise_second: 1     # Speech to text option
+#  stt_timeout: 5                          # Speech to text option
+  deaf: False
+  mute: False
+
+# send hit to anonymously evaluate the global usage of Kalliope app by users
+send_anonymous_usage_stats: True
