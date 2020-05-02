@@ -1,5 +1,1 @@
-Ce dossier contient tout le code nécessaire au fonctionnement du projet Kalliope.
-
-Un assisstant vocal Open Source - développé par la suite par deux étudiants de l'école d'ingénieur ENSISA :
-- Buze Thibault
-- Hadidi Sofiane
+Cette branche ne permet que de modifier les informations nécessaires du brain
