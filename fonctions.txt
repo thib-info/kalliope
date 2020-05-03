@@ -1,9 +1,9 @@
 fonctions à développer : 
 
-Systeme_date => Donner l'heure et la date 
+[A FAIRE EN PREMIER] Systeme_date => Donner l'heure et la date 
 Url => Interagir avec des site en http/https
-Wikipedia => Faire des recherches sur wikipedia
-Nom_ami => Retenir le nom d'un ami
+[A FAIRE EN PREMIER] Wikipedia => Faire des recherches sur wikipedia
+[A FAIRE EN PREMIER] Nom_ami => Retenir le nom d'un ami
 Musique => Lancer le son d'une video Youtube pour de la musique
 Toddo_list => Creer des rappels 
 Citation => Recherches de citations au hasard
