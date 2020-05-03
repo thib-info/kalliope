@@ -1,0 +1,2 @@
+Ce dossier contient tout le code nécessaire au fonctionnement de settings.yml.
+
