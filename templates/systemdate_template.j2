@@ -1,4 +1,63 @@
-{% set day_of_week = {"0": "dimanche", "1": "lundi", "2": "mardi", "3": "mercredi", "4": "jeudi", "5": "vendredi", "6": "samedi"}[weekday] | default("") -%}
-{% set month_word = {"01": "janvier", "02": "février", "03": "mars", "04": "avril", "05": "mai", "06": "juin", "07": "juillet", "08": "août", "09": "septembre", "10": "octobre", "11": "novembre", "12": "décembre"}[month] | default("") -%}
+{% set day_of_week = {
+    "0": "dimanche", 
+    "1": "lundi", 
+    "2": "mardi", 
+    "3": "mercredi", 
+    "4": "jeudi", 
+    "5": "vendredi", 
+    "6": "samedi"
+    }[weekday] | default("") 
+-%}
+
+{% set day_month = {
+    "1": "premier",
+    "2": "deux",
+    "3": "trois",
+    "4": "quatre",
+    "5": "cinq",
+    "6": "six",
+    "7": "sept",
+    "8": "huit",
+    "9": "neuf",
+    "10": "dix",
+    "11": "onze",
+    "12": "douze",
+    "13": "treize",
+    "14": "quatorze",
+    "15": "quinze",
+    "16": "seize",
+    "17": "dix-sept",
+    "18": "dix-huit",
+    "19": "dix-neuf",
+    "20": "vingt",
+    "21": "vingt-et-un",
+    "22": "vingt-deux",
+    "23": "vingt-trois",
+    "24": "vingt-quatre",
+    "25": "vingt-cinq",
+    "26": "vingt-six",
+    "27": "vingt-sept",
+    "28": "vingt-huit",
+    "29": "vingt-neuf",
+    "30": "trente",
+    "31": "trente-et-un",
+    } [day] | default("")
+
+
+{% set month_word = {
+    "01": "janvier", 
+    "02": "février", 
+    "03": "mars", 
+    "04": "avril", 
+    "05": "mai", 
+    "06": "juin", 
+    "07": "juillet", 
+    "08": "août", 
+    "09": "septembre", 
+    "10": "octobre", 
+    "11": "novembre", 
+    "12": "décembre"
+    }[month] | default("") 
+-%}
 
 Nous sommes le {{ day_of_week }} {{ day_month }} {{ month_word }} {{ year }}
