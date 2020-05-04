@@ -1,3 +1,8 @@
 Cette branche ne permet que de modifier les informations nécessaires du brain.yml
 
-systemdate_template.j2 a été mis à jour. Il est normalement fonctionnel 
+systemdate_template.j2 a été mis à jour. Il est normalement fonctionnel. 
+
+wikipedia_search.j2 a été mis à jour. Il est normalement fonctionnel.
+A VERIFIER mais je crois que tu dois taper cette commande pour installer la fonction wikipedia: 
+kalliope install --git-url https://github.com/kalliope-project/kalliope_neuron_wikipedia.git
+
