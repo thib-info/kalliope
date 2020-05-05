@@ -35,4 +35,12 @@
       - say:
           message: "je suis prête"
 
+- name: "friend-name"
+  signal:
+    - order: "Kalliope dis bonjours à {name}"
+  neurons:
+    - say:
+        message: "Bonjours {name}, je suis Kalliopé"
 
+        kalliope_memory:
+          friend="{{name}}"
