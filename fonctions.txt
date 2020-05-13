@@ -1,15 +1,17 @@
 fonctions à développer :
 
 Systeme_date => Donner l'heure et la date   [FAIT]
-Wikipedia => Faire des recherches sur wikipedia     [FAIT] /!\ AJOUTER LE PROJET GIT DANS RESSOURCES/NEURONS 
+Wikipedia => Faire des recherches sur wikipedia     [FAIT] /!\ AJOUTER LE PROJET GIT lien dans fichier Brain.txt
 Nom_ami => Retenir le nom d'un ami        [FAIT]
 Augmenter/Diminuer le volume [FAIT]
+Operations => faire des opérations mathématique [FAIT] /!\ AJOUTER LE PROJET GIT lien dans fichier Brain.txt
+
+
 Musique => Lancer le son d'une video Youtube pour de la musique
 Todo_list => Creer des rappels
 Citation => Recherches de citations au hasard
 Meteo => Trouver la meteo
 Blague => Dire une blague aléatoire
 Infos => Lire un article d'une journal (le monde par exemple)
-Operations => faire des opérations mathématique
 Conversion => Essayer de faire une conversion
 Google_map => Essayer de se connecter à google map
