@@ -1,0 +1,58 @@
+- name: "addition"
+  signals:
+    -order: "Calcule {{ var1 }} + {{ var2 }}"
+    -order: "Calcule {{ var1 }} plus {{ var2 }}"
+    -order: "Combien fait {{ var1 }} + {{ var2 }}"
+    -order: "Combien fait {{ var1 }} plus {{ var2 }}"
+    -order: "Additionne {{ var1 }} et {{ var2 }}"
+  neurons:
+    -calculator:
+      variable_1: "{{ var1 }}"
+      variable_2: "{{ var2 }}"
+      operator: "add"
+      say_template: "{{ var1 }} plus {{ var2 }} est égale à {{ solution }}"
+
+
+- name: "soustraction"
+  signals:
+    -order: "Calcule {{ var1 }} - {{ var2 }}"
+    -order: "Calcule {{ var1 }} moins {{ var2 }}"
+    -order: "Combien fait {{ var1 }} - {{ var2 }}"
+    -order: "Combien fait {{ var1 }} moins {{ var2 }}"
+    -order: "Soustrais {{ var1 }} et {{ var2 }}"
+  neurons:
+    -calculator:
+      variable_1: "{{ var1 }}"
+      variable_2: "{{ var2 }}"
+      operator: "substract"
+      say_template: "{{ var1 }} moins {{ var2 }} est égale à {{ solution }}"
+
+
+- name: "multiplication"
+  signals:
+    -order: "Calcule {{ var1 }} x {{ var2 }}"
+    -order: "Calcule {{ var1 }} fois {{ var2 }}"
+    -order: "Combien fait {{ var1 }} fois {{ var2 }}"
+    -order: "Combien fait {{ var1 }} x {{ var2 }}"
+    -order: "Multiplie {{ var1 }} et {{ var2 }}"
+    -order: "Multiplie {{ var1 }} par {{ var2 }}"
+  neurons:
+    -calculator:
+      variable_1: "{{ var1 }}"
+      variable_2: "{{ var2 }}"
+      operator: "multiply"
+      say_template: "{{ var1 }} fois {{ var2 }} est égale à {{ solution }}"
+
+- name: "division"
+  signals:
+    -order: "Calcule {{ var1 }} / {{ var2 }}"
+    -order: "Calcule {{ var1 }} divisé par {{ var2 }}"
+    -order: "Combien fait {{ var1 }} divisé par {{ var2 }}"
+    -order: "Combien fait {{ var1 }} / {{ var2 }}"
+    -order: "Divise {{ var1 }} par {{ var2 }}"
+  neurons:
+    -calculator:
+      variable_1: "{{ var1 }}"
+      variable_2: "{{ var2 }}"
+      operator: "divide"
+      say_template: "{{ var1 }} divisé par {{ var2 }} est égale à {{ solution }}"

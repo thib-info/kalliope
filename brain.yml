@@ -5,6 +5,7 @@
         - brains/systemdate.yml
         - brains/neurotransmitter.yml
         - brains/wikipedia_searcher.yml
+        - brains/calculator.yml
 
   - name: "order-not-found-synapse"
     signals: []
