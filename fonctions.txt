@@ -1,8 +1,9 @@
 fonctions à développer :
 
 Systeme_date => Donner l'heure et la date   [FAIT]
-Wikipedia => Faire des recherches sur wikipedia     [FAIT]
+Wikipedia => Faire des recherches sur wikipedia     [FAIT] /!\ AJOUTER LE PROJET GIT DANS RESSOURCES/NEURONS 
 Nom_ami => Retenir le nom d'un ami        [FAIT]
+Augmenter/Diminuer le volume [FAIT]
 Musique => Lancer le son d'une video Youtube pour de la musique
 Todo_list => Creer des rappels
 Citation => Recherches de citations au hasard
