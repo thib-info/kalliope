@@ -1,7 +1,5 @@
 Voici les info de {{ feed }}
 
-{% set count = 1 %}
 {% for item in items %}
-Info {{ count }}. {{ item.title }}
-{% set count = count + 1 %}
+    Info {{ loop.index }}. {{ item.title }}.
 {% endfor %}

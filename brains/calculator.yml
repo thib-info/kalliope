@@ -30,12 +30,12 @@
 
 - name: "multiplication"
   signals:
-    -order: "Calcule {{ var1 }} x {{ var2 }}"
-    -order: "Calcule {{ var1 }} fois {{ var2 }}"
-    -order: "Combien fait {{ var1 }} fois {{ var2 }}"
-    -order: "Combien fait {{ var1 }} x {{ var2 }}"
-    -order: "Multiplie {{ var1 }} et {{ var2 }}"
-    -order: "Multiplie {{ var1 }} par {{ var2 }}"
+    - order: "Calcule {{ var1 }} x {{ var2 }}"
+    - order: "Calcule {{ var1 }} fois {{ var2 }}"
+    - order: "Combien fait {{ var1 }} fois {{ var2 }}"
+    - order: "Combien fait {{ var1 }} x {{ var2 }}"
+    - order: "Multiplie {{ var1 }} et {{ var2 }}"
+    - order: "Multiplie {{ var1 }} par {{ var2 }}"
   neurons:
     -calculator:
       variable_1: "{{ var1 }}"
@@ -45,11 +45,11 @@
 
 - name: "division"
   signals:
-    -order: "Calcule {{ var1 }} / {{ var2 }}"
-    -order: "Calcule {{ var1 }} divisé par {{ var2 }}"
-    -order: "Combien fait {{ var1 }} divisé par {{ var2 }}"
-    -order: "Combien fait {{ var1 }} / {{ var2 }}"
-    -order: "Divise {{ var1 }} par {{ var2 }}"
+    - order: "Calcule {{ var1 }} / {{ var2 }}"
+    - order: "Calcule {{ var1 }} divisé par {{ var2 }}"
+    - order: "Combien fait {{ var1 }} divisé par {{ var2 }}"
+    - order: "Combien fait {{ var1 }} / {{ var2 }}"
+    - order: "Divise {{ var1 }} par {{ var2 }}"
   neurons:
     -calculator:
       variable_1: "{{ var1 }}"

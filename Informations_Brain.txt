@@ -9,3 +9,7 @@ kalliope install --git-url https://github.com/kalliope-project/kalliope_neuron_w
 Commande pour installer la fonction Calculator: 
 kalliope install --git-url https://github.com/corus87/calculator-neuron
 
+Commande pour installer le lecteur de flux RSS:
+kalliope install --git-url https://github.com/kalliope-project/kalliope_neuron_rss_reader.git
+
+

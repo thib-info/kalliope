@@ -43,21 +43,31 @@
     - say:
         message: "Bonjour {name}, je suis Kalliopé"
 
-        kalliope_memory:
-          friend="{{name}}"
+        kalliope_memory: friend="{{name}}"
 
 - name: "augmenter le volume"
   signal:
     - order: "Augmente le volume"
   neurons:
-    -volume:
-      level: "10"
-      action: "raise"
+    - volume:
+        level: "10"
+        action: "raise"
 
 - name: "diminuer le volume"
   signal:
     - order: "Diminue le volume"
   neurons:
-    -volume:
-      level: "10"
-      action: "lower"    
+    - volume:
+        level: "10"
+        action: "lower"    
+
+- name: "Une-LeMonde"
+  signals:
+    - order : "Quel est la une d'aujourd'hui"
+    - order : "Quelles sont les informations d'aujourd'hui"
+    - order : "Quelles sont les dernières actualités"
+  neurons: 
+    - rss_reader: 
+        feed_url: "https://www.lemonde.fr/rss/une.xml"
+        max_items: 5
+        file_template: templates/rss_new_lemonde.j2
